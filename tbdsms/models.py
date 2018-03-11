@@ -1,7 +1,36 @@
 from django.db import models
 
 
+class Location(models.Model):
+    """
+    Represents a location to drop off opioids.
+    """
+
+    name = models.CharField(
+        max_length=200,
+    )
+
+    type = models.CharField(
+        max_length=100,
+        blank=True,
+        help_text="Type of location (e.g. pharmacy)"
+    )
+
+    address = models.CharField(
+        max_length=200,
+    )
+
+    latitude = models.FloatField()
+
+    longitude = models.FloatField()
+
+
 class AlertRecipient(models.Model):
+    """
+    Represents an individual who wants to be alerted
+    about Take Back Day events.
+    """
+
     ENGLISH = 'en'
     SPANISH = 'es'
 
@@ -25,14 +54,8 @@ class AlertRecipient(models.Model):
         default=ENGLISH,
     )
 
-    location = models.CharField(
-        max_length=200,
-        blank=True,
-        help_text="Location to drop off opioids",
-    )
-
-    location_link = models.URLField(
-        max_length=500,
-        blank=True,
-        help_text="Google Maps link to location",
+    location = models.ForeignKey(
+        Location,
+        on_delete=models.SET_NULL,
+        null=True,
     )
