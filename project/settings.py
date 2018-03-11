@@ -14,11 +14,14 @@ import os
 import sys
 
 import dj_database_url
+import dotenv
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 path = lambda *parts: os.path.join(BASE_DIR, *parts)
+
+dotenv.load_dotenv()
 
 if os.path.basename(sys.argv[0]) == 'manage.py' or 'DEBUG' in os.environ:
     # Quick-start development settings - unsuitable for production
@@ -27,6 +30,20 @@ if os.path.basename(sys.argv[0]) == 'manage.py' or 'DEBUG' in os.environ:
     os.environ.setdefault('DEBUG', 'yup')
     os.environ.setdefault('DATABASE_URL', f"sqlite:///{path('db.sqlite3')}")
 
+
+def get_twilio_environ(key):
+    value = os.environ.get(key)
+    if not value:
+        raise Exception(f"{key} not in environment! Please define this "
+                        f"value from https://twilio.com/user/account.")
+    return value
+
+
+TWILIO_ACCOUNT_SID = get_twilio_environ('TWILIO_ACCOUNT_SID')
+
+TWILIO_AUTH_TOKEN = get_twilio_environ('TWILIO_AUTH_TOKEN')
+
+TWILIO_FROM_NUMBER = get_twilio_environ('TWILIO_FROM_NUMBER')
 
 SECRET_KEY = os.environ['SECRET_KEY']
 

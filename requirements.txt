@@ -2,6 +2,8 @@ dj-database-url==0.5.0
 Django==2.0.3
 pytz==2018.3
 whitenoise==3.3.1
+twilio==6.10.4
+python-dotenv==0.8.2
 
 # TODO: These should eventually be moved to a requirements-dev.txt.
 pytest==3.4.2

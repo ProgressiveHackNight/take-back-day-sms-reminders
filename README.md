@@ -49,8 +49,19 @@ _Add your name here if you plan to stay on with this project!_
 
 * Python 3.6
 * [pip and virtualenv](http://stackoverflow.com/q/4324558)
+* A [Twilio][] developer account and phone number.
 
 ## Quick Start
+
+First, run:
+
+```
+cp .env.sample .env   # On Windows, use 'copy' instead of 'cp'.
+```
+
+Then edit `.env` as needed.
+
+Then run:
 
 ```
 python3 -m venv venv
@@ -73,6 +84,15 @@ python manage.py runserver
 At this point, you can visit http://localhost:8000/admin and log in
 as the user you created earlier.
 
+### Testing SMS
+
+To test your SMS-sending functionality, use the `manage.py sendtestsms`
+command, e.g.:
+
+```
+python manage.py sendtestsms 5551234567
+```
+
 ## Environment Variables
 
 Unlike traditional Django settings, we use environment variables
@@ -90,6 +110,10 @@ variables are given default values: `SECRET_KEY`. Also, `DEBUG` is enabled.
   (this should always be false in production).
 * `DATABASE_URL` is the URL for the database. Defaults to a `sqlite://`
   URL pointing to `db.sqlite3` at the root of the repository.
+* `TWILIO_ACCOUNT_SID` is the account SID for your Twilio account.
+* `TWILIO_AUTH_TOKEN` is the auth token for your Twilio account.
+* `TWILIO_FROM_NUMBER` is the Twilio phone number you want SMS messages
+  to come from.
 
 ## Running tests
 
