@@ -43,17 +43,7 @@ We need to find a secure way to accept and store this data, as it is personally 
 
 ## How can we contact you outside of Github(list social media or places you're present)?
 
-_Add your name here if you plan to stay on with this project through the March 11 HackDay!_
-
-## Sources
-
-This is all based on the presentation from the following people! They presented at the Pre-HackDay!
-
-* Daniel Spencer (full stack dev) - daniel.patrick.spencer@gmail.com
-* Carlos Merced (front end dev) - mail.merced@gmail.com
-* Annie Hirshman (designer) - anniehirshman@gmail.com
-* Anna de Paula Hanika (product) - annadph@gmail.com
-* Daeha Ko (IT) - daehako@gmail.com
+_Add your name here if you plan to stay on with this project!_
 
 ## Requirements
 
@@ -108,6 +98,21 @@ We use [pytest-django][] for our tests. You can run the tests with:
 ```
 pytest
 ```
+
+## Credits
+
+This is all based on work from the following people:
+
+* Daniel Spencer (full stack dev) - daniel.patrick.spencer@gmail.com
+* Carlos Merced (front end dev) - mail.merced@gmail.com
+* Annie Hirshman (designer) - anniehirshman@gmail.com
+* Anna de Paula Hanika (product) - annadph@gmail.com
+* Daeha Ko (IT) - daehako@gmail.com
+* Atul Varma - varmaa@gmail.com
+* Vesha Parker - vesha@progressivehacknight.org
+* Bibiana Aguero - bibiana@bibianart.com
+* Yan Feng - yf2373@columbia.edu
+* Rapi Castillo - rapi@progressivehacknight.org
 
 [twelve-factor]: http://12factor.net/
 [pytest-django]: https://pytest-django.readthedocs.io/en/latest/
