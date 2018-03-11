@@ -1,22 +1,26 @@
 {
-  "name": "take-back-day-sms-reminders",
-  "version": "1.0.0",
-  "description": "Take Back Day SMS",
-  "main": "index.js",
+  "name": "twilio-api",
+  "version": "0.0.1",
+  "description": "What am I about?",
+  "main": "server.js",
   "scripts": {
-    "test": "test"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "twilio": "^4.6.0",
+    "body-parser": "^1.18.2"
+  },
+  "engines": {
+    "node": "8.x"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ProgressiveHackNight/take-back-day-sms-reminders.git"
+    "url": ""
   },
+  "license": "MIT",
   "keywords": [
-    "Text"
-  ],
-  "author": "RApi, Bibiana, Atul, Vesha",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ProgressiveHackNight/take-back-day-sms-reminders/issues"
-  },
-  "homepage": "https://github.com/ProgressiveHackNight/take-back-day-sms-reminders#readme"
+    "node",
+    "glitch",
+    "express"
+  ]
 }
