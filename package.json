@@ -1,0 +1,22 @@
+{
+  "name": "take-back-day-sms-reminders",
+  "version": "1.0.0",
+  "description": "Take Back Day SMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgressiveHackNight/take-back-day-sms-reminders.git"
+  },
+  "keywords": [
+    "Text"
+  ],
+  "author": "RApi, Bibiana, Atul, Vesha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgressiveHackNight/take-back-day-sms-reminders/issues"
+  },
+  "homepage": "https://github.com/ProgressiveHackNight/take-back-day-sms-reminders#readme"
+}
