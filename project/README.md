@@ -101,5 +101,13 @@ variables are given default values: `SECRET_KEY`. Also, `DEBUG` is enabled.
 * `DATABASE_URL` is the URL for the database. Defaults to a `sqlite://`
   URL pointing to `db.sqlite3` at the root of the repository.
 
+## Running tests
+
+We use [pytest-django][] for our tests. You can run the tests with:
+
+```
+pytest
+```
 
 [twelve-factor]: http://12factor.net/
+[pytest-django]: https://pytest-django.readthedocs.io/en/latest/

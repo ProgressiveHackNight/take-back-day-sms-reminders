@@ -58,4 +58,5 @@ class AlertRecipient(models.Model):
         Location,
         on_delete=models.SET_NULL,
         null=True,
+        blank=True,
     )
