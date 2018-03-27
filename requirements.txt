@@ -5,3 +5,5 @@ pytz==2018.3
 # TODO: These should eventually be moved to a requirements-dev.txt.
 pytest==3.4.2
 pytest-django==3.1.2
+djangorestframework
+pygments
